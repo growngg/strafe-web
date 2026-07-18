@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenido • Strafe Network</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="img/strafe-logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="trails" aria-hidden="true">
+  <div class="trail"></div>
+  <div class="trail"></div>
+  <div class="trail"></div>
+  <div class="trail"></div>
+  <div class="trail"></div>
+</div>
+
+<header>
+  <nav>
+    <div class="brand">
+      <img src="img/strafe-logo.png" alt="Strafe MC">
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#modalidades">Modalidades</a>
+      <a href="#por-que">Por qué Strafe</a>
+      <a href="#unirse">Cómo unirse</a>
+      <a href="#trabaja">Trabaja con nosotros</a>
+      <a href="#footer">Comunidad</a>
+    </div>
+    <div class="nav-right">
+      <div class="ip-pill">
+        <span class="mono">strafepvp.cc</span>
+        <button onclick="copyIP(this)">Copiar</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema claro/oscuro"><i class="fa-solid fa-moon"></i></button>
+      <button class="burger" id="burger" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="hero-logo" src="img/strafe-logo.png" alt="Logotipo de Strafe MC">
+    <div class="status-pill" id="statusPill">
+        <span class="dot"></span>
+        <span id="statusText">Servidor en línea</span>
+        <span class="status-sep"></span>
+        <i class="fa-solid fa-user-group"></i>
+        <span id="playerCount">—</span>
+        <span>jugadores conectados</span>
+    </div>
+    <h1>Tu <span>aventura</span> empieza en Strafe</h1>
+    <p class="lead">Servidor de Minecraft en constante crecimiento. Disfruta hoy de nuestra modalidad Survival SMP.</p>
+    <div class="hero-actions">
+      <a class="btn btn-discord" href="https://discord.gg/C3P5kpkdkQ" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Unirse al Discord</a>
+      <a class="btn btn-work" href="#trabaja"><i class="fa-solid fa-toolbox"></i> Trabaja con nosotros</a>
+      <a class="btn btn-ghost" href="#modalidades">Ver modalidades</a>
+    </div>
+    <div class="hero-ip">
+      <div>
+        <div class="label">IP del servidor</div>
+        <div class="value mono">strafepvp.cc</div>
+      </div>
+      <button class="copy-btn" onclick="copyIP(this)"><i class="fa-solid fa-copy"></i> Copiar</button>
+    </div>
+  </section>
+
+  <section id="modalidades">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Modalidades</span>
+        <h2>Empezamos por Survival SMP. Lo demás está en construcción.</h2>
+        <p>Cada modalidad se lanza cuando está lista de verdad, no antes. Así es como se ve el mapa de lo que viene.</p>
+      </div>
+
+      <div class="modes-grid">
+        <div class="mode-card active">
+          <div class="mode-inner">
+            <div>
+              <span class="mode-tag maintenance"><span class="dotmaintenance"></span>En Mantenimiento</span>
+              <h3>Survival SMP</h3>
+              <p>El corazón de Strafe. Un mundo persistente donde construir, comerciar y crecer con el resto de la comunidad, con la economía y las reglas cuidadas para que dure.</p>
+              <ul class="mode-features">
+                <li>Claims de terreno para proteger tus construcciones</li>
+                <li>Economía activa con tienda de jugadores y trabajos</li>
+                <li>Eventos semanales y jefes personalizados</li>
+                <li>Grief y hacks fuera: staff y anti-cheat activos</li>
+              </ul>
+            </div>
+            <div class="mode-art">
+              <img src="img/smp.webp">
+            </div>
+          </div>
+        </div>
+
+        <div class="mode-card locked">
+          <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+          <span class="mode-tag soon">Próximamente</span>
+          <h3>Practice</h3>
+          <p>Duelos, combos y rankeds para afilar tu nivel. En desarrollo.</p>
+          <div class="mode-art"><span>PRACTICE</span></div>
+        </div>
+
+        <div class="mode-card locked">
+          <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+          <span class="mode-tag soon">Próximamente</span>
+          <h3>Prison OP</h3>
+          <p>Farmea increibles cosas y obten recompensas. En desarrollo.</p>
+          <div class="mode-art"><span>PRISON</span></div>
+        </div>
+
+        <div class="mode-card locked">
+          <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+          <span class="mode-tag soon">Próximamente</span>
+          <h3>Factions</h3>
+          <p>Forma alianzas, raidea bases enemigas y domina el mapa. En desarrollo.</p>
+          <div class="mode-art"><span>FACTIONS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-que">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Por qué Strafe</span>
+        <h2>Una network pensada para quedarse</h2>
+        <p>Nada de lanzar todo a medias. Preferimos pocas modalidades bien hechas a muchas rotas.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Rendimiento estable</h3>
+          <p>Servidores dimensionados para que el TPS no baje aunque el spawn esté lleno.</p>
+        </div>
+        <div class="feature">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Staff activo</h3>
+          <p>Moderación presente en horarios pico y anti-cheat corriendo en todo momento.</p>
+        </div>
+        <div class="feature">
+          <div class="icon"><i class="fa-solid fa-compass"></i></div>
+          <h3>Roadmap público</h3>
+          <p>Cada modalidad nueva se anuncia y se prueba con la comunidad antes de salir.</p>
+        </div>
+        <div class="feature">
+          <div class="icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Comunidad real</h3>
+          <p>Discord activo donde las decisiones del servidor se discuten con los jugadores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="unirse">
+    <div class="wrap">
+      <div class="join">
+        <div class="section-head" style="margin-bottom:36px;">
+          <span class="kicker">Cómo unirse</span>
+          <h2>Estás a cuatro pasos de jugar</h2>
+        </div>
+        <div class="join-grid">
+          <div class="step">
+            <span class="num">01</span>
+            <h4>Abre Minecraft Java</h4>
+            <p>Asegúrate de estar en una versión 26.1.2.</p>
+          </div>
+          <div class="step">
+            <span class="num">02</span>
+            <h4>Añade el servidor</h4>
+            <p>Pega la IP <strong class="mono">strafepvp.cc</strong> en tu lista de servidores.</p>
+          </div>
+          <div class="step">
+            <span class="num">03</span>
+            <h4>Conéctate</h4>
+            <p>Entra al servidor, elige un idioma y elige la modalidad que deseas jugar.</p>
+          </div>
+          <div class="step">
+            <span class="num">04</span>
+            <h4>Únete al Discord</h4>
+            <p>Verifica tu cuenta para recibir noticias, votar encuestas y reportar bugs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabaja">
+    <div class="wrap">
+      <div class="work-banner">
+        <div class="copy">
+          <span class="kicker">Trabaja con nosotros</span>
+          <h2>Ayúdanos a construir Strafe</h2>
+          <p>Buscamos gente constante y con criterio para sumarse al staff: moderación, soporte, builders y desarrollo. Las postulaciones se hacen desde nuestro Discord.</p>
+          <div class="work-roles">
+            <span class="role-pill">Moderador</span>
+            <span class="role-pill">Soporte</span>
+            <span class="role-pill">Builder</span>
+            <span class="role-pill">Developer</span>
+            <span class="role-pill">Community Manager</span>
+          </div>
+        </div>
+        <a class="btn btn-discord" href="https://discord.gg/strafemc" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Postularme en Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-cta">
+    <div class="wrap">
+      <h2>La IP ya la tienes. El resto lo construimos juntos.</h2>
+      <p>strafepvp.cc · Java Edition 26.1.2</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="copyIP(this)"><i class="fa-solid fa-clipboard-list"></i> Copiar IP</button>
+        <a class="btn btn-discord" href="https://discord.gg/strafemc" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Unirse al Discord</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/strafe-logo.png" alt="Strafe MC">
+      <span>© 2026 Strafe MC. No afiliado a Mojang ni a Microsoft.</span>
+    </div>
+    <div class="social">
+      <a href="https://discord.gg/C3P5kpkdkQ" target="_blank" rel="noopener" aria-label="Discord" title="Discord"><i class="fa-brands fa-discord"></i></a>
+      <a href="#" aria-label="TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" aria-label="Twitter / X" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
